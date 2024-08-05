@@ -21,7 +21,7 @@ const socialItems = social.networks;
         <div class="flex space-x-5 pt-8 m-auto">
           {
             socialItems?.map((item) => (
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
+              <a href={item.url} target="_blank" rel="noopener noreferrer" title={item.name}>
                 <figure>
                   <Fragment set:html={item.svg} />
                 </figure>
@@ -40,6 +40,7 @@ const socialItems = social.networks;
             alt={config.author.name}
             decoding="async"
             loading="lazy"
+            title={config.author.name}
           />
         </figure>
       </div>
